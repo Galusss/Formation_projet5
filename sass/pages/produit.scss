@@ -1,0 +1,89 @@
+/* BLOC 3 */ 
+#bloc3{
+    background-color: #F4EBF2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.product__end-text{
+    padding-bottom: 50px;
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.choice-lenses{
+    display: flex;
+    flex-direction: column;
+}
+
+#nom{
+    padding-top: 30px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 26px;
+    padding-top: 20px;
+    color: #3B2D39;
+    font-weight: bold;
+}
+
+#prix, #marque, #lentilles, #description{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 22px;
+}
+
+.img-customize{
+    display: block;
+    margin: auto;
+    height:80%;
+    width: 80%;
+    margin-top: 30px;
+    }
+
+.bloc3_customize_items{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1300px){
+    .img-customize{
+    display: block;
+    margin: auto;
+    }
+}
+
+@media (max-width: 650px){
+
+    #nom {
+        font-size: 22px;
+    }
+
+    #prix, #marque, #lentilles, #description{
+        font-size: 18px;
+    }
+
+    #bloc3 p{
+        font-size: 14px;
+    }
+
+    #bloc3 h2{
+        font-size: 24px;
+    }
+
+    .choice-lenses-label{
+        font-size: 22px;
+    }
+
+    .product__end-text{
+        font-size: 11px;
+    }
+    .btn-customize{
+        width: 200px;
+    }
+}

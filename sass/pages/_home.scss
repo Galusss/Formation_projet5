@@ -1,0 +1,223 @@
+/* BLOC1 */
+.bloc1{
+    background-color: #F4EBF2;
+    padding-bottom: 50px;
+}
+
+.bloc1 h3{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 26px;
+    padding-top: 20px;
+    color: #3B2D39;
+}
+
+.bloc1 p{
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.bloc1__title{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 35px;
+    text-align: center;
+    margin: 0;
+    padding-top: 50px ;
+    padding-bottom: 20px;
+}
+
+.product-info{
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 75%;
+}
+
+.end-text{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 70px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* product fuxi480 (bloc1) */
+.bloc1__product-fuxi480{
+    background-color: #bdb3bb;
+    height: 550px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.bloc1__product-info-fuxi480{
+    display: flex;
+    flex-direction: column;
+}
+
+.bloc1__product-fuxi480 img{
+    float: left;
+    padding: 70px;
+}
+
+/* product kiraS50 (bloc1) */
+.bloc1__product-kiraS50{
+    background-color: #bdb3bb;
+    height: 550px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.bloc1__product-info-kiraS50{
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+}
+
+.bloc1__product-kiraS50 img{
+    float: right;
+    padding: 70px;
+}
+
+/* product boki100T (bloc1) */
+.bloc1__product-boki100T{
+    background-color: #bdb3bb;
+    height: 550px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.bloc1__product-info-boki100T{
+    display: flex;
+    flex-direction: column;
+}
+
+.bloc1__product-boki100T img{
+    float: left;
+    padding: 70px;
+}
+
+/* product tuxor (bloc1) */
+.bloc1__product-tuxor{
+    background-color: #bdb3bb;
+    height: 550px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.bloc1__product-info-tuxor{
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+}
+
+.bloc1__product-tuxor img{
+    float: right;
+    padding: 70px;
+}
+
+
+/* product piker (bloc1) */
+.bloc1__product-piker{
+    background-color: #bdb3bb;
+    height: 550px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.bloc1__product-info-piker{
+    display: flex;
+    flex-direction: column;
+}
+
+.bloc1__product-piker img{
+    float: left;
+    padding: 70px;
+}
+
+/* responsive (bloc1) */
+@media (max-width: 1100px){
+
+    .bloc1 h3{
+        font-size: 24px;
+    }
+
+    .bloc1 p{
+        font-size: 20px;
+    }
+
+    .bloc1__title{
+        font-size: 33px;
+    }
+
+    .product-info{
+        font-size: 22px;
+    }
+
+    .home__end-text{
+        font-size: 20px;
+    }
+
+    .bloc1__product-piker, .bloc1__product-tuxor, .bloc1__product-boki100T, .bloc1__product-kiraS50, .bloc1__product-fuxi480{
+        margin-left: 50px;
+        margin-right: 50px;
+        height: 900px;
+    }
+
+    .bloc1__product-info-fuxi480, .bloc1__product-info-kiraS50, .bloc1__product-info-boki100T, .bloc1__product-info-tuxor, .bloc1__product-info-piker{
+        align-items: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    .bloc1__product-fuxi480 img, .bloc1__product-kiraS50 img, .bloc1__product-boki100T img, .bloc1__product-tuxor img, .bloc1__product-piker img{
+        padding: 0px;
+        margin: 0px;
+        float: none;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 75px;
+    }
+}
+
+@media (max-width: 650px){
+
+    .bloc1 h3{
+        font-size: 20px;
+    }
+
+    .bloc1 p{
+        font-size: 16px;
+    }
+
+    #bloc3 h2{
+        font-size: 29px;
+    }
+
+    .home__end-text{
+        font-size: 11px;
+    }
+
+    .bloc1__product-piker, .bloc1__product-tuxor, .bloc1__product-boki100T, .bloc1__product-kiraS50, .bloc1__product-fuxi480{
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 700px;
+    }
+
+    .bloc1__product-fuxi480 img, .bloc1__product-kiraS50 img, .bloc1__product-boki100T img, .bloc1__product-tuxor img, .bloc1__product-piker img{
+        height: 150px;
+        width: 150px;
+    }
+
+    .bloc1__btn-select-product{
+        height: 45px;
+        width: 200px;
+    }
+}

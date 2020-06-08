@@ -1,0 +1,10 @@
+.bloc1__product-fuxi480, .bloc1__product-kiraS50, .bloc1__product-boki100T, .bloc1__product-tuxor, .bloc1__product-piker, table, .summary_form, .img-customize, .order_confirmation_message{
+    transform: scale(1);
+    transition: transform 0.2s;
+}
+
+.bloc1__product-fuxi480:hover, .bloc1__product-kiraS50:hover, .bloc1__product-boki100T:hover, .bloc1__product-tuxor:hover, .bloc1__product-piker:hover, table:hover, .summary_form:hover, .img-customize:hover, .order_confirmation_message:hover{
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
