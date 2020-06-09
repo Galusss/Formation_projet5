@@ -244,15 +244,15 @@ function produitPiker() {
 // Appel de la bonne fonction selon l'URL détecté par window.location (1 URL différent pour chaque produit)
 function AfficheMonProduit() {
     let Adress = window.location;
-    if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Fuxi" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Fuxi")*/ {
+    if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Fuxi" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Fuxi"*/) {
         produitFuxi()
-    } else if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Kira" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Kira")*/ {
+    } else if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Kira" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Kira"*/) {
         produitKira()
-    } else if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Boki" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Boki")*/ {
+    } else if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Boki" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Boki"*/) {
         produitBoki()
-    } else if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Tuxor" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Tuxor")*/ {
+    } else if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Tuxor" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Tuxor"*/) {
         produitTuxor()
-    } else if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Piker" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Piker")*/ {
+    } else if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Piker" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Piker"*/) {
         produitPiker()
     }
 }
