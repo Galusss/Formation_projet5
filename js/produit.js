@@ -5,6 +5,9 @@ let description = document.getElementById("description")
 let prix = document.getElementById("prix")
 let lentille1 = document.getElementById("lense1")
 let lentille2 = document.getElementById("lense2")
+let formName = document.getElementById("choice-name")
+let formPrix = document.getElementById("price")
+
 
 
 
@@ -32,7 +35,10 @@ function produitFuxi() {
     marque.innerHTML = "Marque : " + fuxiJson.marque
     lentilles.innerHTML = "Lentilles : " + fuxiJson.lentilles
     description.innerHTML = "Description : " + fuxiJson.description
-    prix.innerHTML = fuxiJson.prix + " €"
+    prix.innerHTML = "Prix : " + fuxiJson.prix + " €"
+    // Afficher les bonne valeurs pour le formulaire ou les choix ne seront pas visible par l'user, cela permettra de les envoyer dans le localStorage
+    formName.setAttribute("value", "Fuxi-480")
+    formPrix.setAttribute("value", "299")
     // Afficher les bonnes valeurs pour le formulaire de choix des lentilles
     lense1.innerHTML = fuxiJson.lentille1
     lense2.innerHTML = fuxiJson.lentille2
@@ -75,7 +81,10 @@ function produitKira() {
     marque.innerHTML = "Marque : " + kiraJson.marque
     lentilles.innerHTML = "Lentilles : " + kiraJson.lentilles
     description.innerHTML = "Description : " + kiraJson.description
-    prix.innerHTML = kiraJson.prix + " €"
+    prix.innerHTML = "Prix : " + kiraJson.prix + " €"
+    // Afficher les bonne valeurs pour le formulaire ou les choix ne seront pas visible par l'user, cela permettra de les envoyer dans le localStorage
+    formName.setAttribute("value", "Kira-S50")
+    formPrix.setAttribute("value", "809")
     // Afficher les bonnes valeurs pour le formulaire de choix des lentilles
     lense1.innerHTML = kiraJson.lentille1
     lense2.innerHTML = kiraJson.lentille2
@@ -118,7 +127,10 @@ function produitBoki() {
     marque.innerHTML = "Marque : " + bokiJson.marque
     lentilles.innerHTML = "Lentilles : " + bokiJson.lentilles
     description.innerHTML = "Description : " + bokiJson.description
-    prix.innerHTML = bokiJson.prix + " €"
+    prix.innerHTML = "Prix : " + bokiJson.prix + " €"
+    // Afficher les bonne valeurs pour le formulaire ou les choix ne seront pas visible par l'user, cela permettra de les envoyer dans le localStorage
+    formName.setAttribute("value", "Boki-100T")
+    formPrix.setAttribute("value", "1119")
     // Afficher les bonnes valeurs pour le formulaire de choix des lentilles
     lense1.innerHTML = bokiJson.lentille1
     lense2.innerHTML = bokiJson.lentille2
@@ -161,7 +173,10 @@ function produitTuxor() {
     marque.innerHTML = "Marque : " + tuxorJson.marque
     lentilles.innerHTML = "Lentilles : " + tuxorJson.lentilles
     description.innerHTML = "Description : " + tuxorJson.description
-    prix.innerHTML = tuxorJson.prix + " €"
+    prix.innerHTML = "Prix : " + tuxorJson.prix + " €"
+    // Afficher les bonne valeurs pour le formulaire ou les choix ne seront pas visible par l'user, cela permettra de les envoyer dans le localStorage
+    formName.setAttribute("value", "Tuxor")
+    formPrix.setAttribute("value", "2098")
     // Afficher les bonnes valeurs pour le formulaire de choix des lentilles
     lense1.innerHTML = tuxorJson.lentille1
     lense2.innerHTML = tuxorJson.lentille2
@@ -188,7 +203,7 @@ let pikerJson = {
     lentille1: "19mm",
     lentille2: "29mm",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    prix: 2098
+    prix: 2479
 }
 
 // Fonction permettant d'afficher les informations du produit sélectionner (page dynamique)
@@ -204,7 +219,10 @@ function produitPiker() {
     marque.innerHTML = "Marque : " + pikerJson.marque
     lentilles.innerHTML = "Lentilles : " + pikerJson.lentilles
     description.innerHTML = "Description : " + pikerJson.description
-    prix.innerHTML = pikerJson.prix + " €"
+    prix.innerHTML = "Prix : " + pikerJson.prix + " €"
+    // Afficher les bonne valeurs pour le formulaire ou les choix ne seront pas visible par l'user, cela permettra de les envoyer dans le localStorage
+    formName.setAttribute("value", "Piker")
+    formPrix.setAttribute("value", "2479")
     // Afficher les bonnes valeurs pour le formulaire de choix des lentilles
     lense1.innerHTML = pikerJson.lentille1
     lense2.innerHTML = pikerJson.lentille2
@@ -226,16 +244,39 @@ function produitPiker() {
 // Appel de la bonne fonction selon l'URL détecté par window.location (1 URL différent pour chaque produit)
 function AfficheMonProduit() {
     let Adress = window.location;
-    if (Adress ==  /* GITHUB -> "https://galusss.github.io/Formation_projet5/produit.html#Fuxi" LOCAL ->*/ "file:///D:/GitHub/Formation_projet5/produit.html#Fuxi") {
+    if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Fuxi" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Fuxi")*/ {
         produitFuxi()
-    } else if (Adress ==  /* GITHUB -> "https://galusss.github.io/Formation_projet5/produit.html#Kira" LOCAL ->*/ "file:///D:/GitHub/Formation_projet5/produit.html#Kira") {
+    } else if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Kira" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Kira")*/ {
         produitKira()
-    } else if (Adress ==  /* GITHUB -> "https://galusss.github.io/Formation_projet5/produit.html#Boki" LOCAL ->*/ "file:///D:/GitHub/Formation_projet5/produit.html#Boki") {
+    } else if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Boki" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Boki")*/ {
         produitBoki()
-    } else if (Adress ==  /* GITHUB -> "https://galusss.github.io/Formation_projet5/produit.html#Tuxor" LOCAL ->*/ "file:///D:/GitHub/Formation_projet5/produit.html#Tuxor") {
+    } else if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Tuxor" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Tuxor")*/ {
         produitTuxor()
-    } else if (Adress ==  /* GITHUB -> "https://galusss.github.io/Formation_projet5/produit.html#Piker" LOCAL ->*/ "file:///D:/GitHub/Formation_projet5/produit.html#Piker") {
+    } else if (Adress ==  /* GITHUB ->*/ "https://galusss.github.io/Formation_projet5/produit.html#Piker" /*LOCAL -> "file:///D:/GitHub/Formation_projet5/produit.html#Piker")*/ {
         produitPiker()
     }
 }
 AfficheMonProduit() // Appel de la fonction qui entrainera l'appel de la bonne fonction selon le produit choisis
+
+
+
+
+// Lors du click sur le bouton du formulaire la fonction "produitSelectionne" est appliquer
+let btn = document.getElementById("btn_produit")
+btn.addEventListener("click", produitSelectionner)
+
+// Fonction permetant d'enregistrer les données du formulaire dans le localStorage, cela va permettre de pouvoir afficher le produit séléctionner dans le récap de commande. 
+function produitSelectionner(){
+    let produitSelectJson = {
+        nom: document.getElementById("choice-name").value,
+        prix:document.getElementById("price").value,
+        lentilles:document.getElementById("lenses").value,
+    }
+    let produitSelect = JSON.stringify(produitSelectJson);
+    localStorage.setItem("Produit Sélectionné", produitSelect);
+    // Si l'utilisateur choisis un nouveau produits celui si sera stocké dans un nouveau objet depuis le localStorage
+    var produits = "Produit Séléctionné";
+    var produitstID = localStorage.length + 1;
+    localStorage[produits + produitstID] = produitSelect;
+
+}

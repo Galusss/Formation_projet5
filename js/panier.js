@@ -1,11 +1,22 @@
-let produit = document.getElementById("produit");
-let lentille = document.getElementById("lentilles");
-let prix = document.getElementById("prix");
-let quantite = document.getElementById("quantite");
-let total = document.getElementById("total");
+// Fonction permettant d'afficher le récapitulatif de commande
+function recap(){
+    let produit = document.getElementById("produit");
+    let lentille = document.getElementById("lentilles");
+    let prix = document.getElementById("prix");
+    produitSelect = localStorage.getItem("Produit Sélectionné"); // Récupère les éléments stockés dans le localStorage
+    produitSelectJson = JSON.parse(produitSelect); // Convertions en JSON afin de pouvoir sélectionner chaque objet stocké
+    lentille.innerHTML = produitSelectJson.lentilles;
+    produit.innerHTML = produitSelectJson.nom;
+    prix.innerHTML = produitSelectJson.prix + " €"
+}
+recap()
 
-
-
+// Fonction permettant d'afficher le montant total depuis le récapitulatif de commande
+function totalPrice(){
+    let total = document.getElementById("total");
+    total.innerHTML = produitSelectJson.prix+ " €"
+}
+totalPrice()
 
 
 
@@ -39,16 +50,3 @@ function infoArticle() {
 infoArticle()
 */
 
-/*
-// Récupérer les informations du formulaire de contact 
-$(document).ready(function () {
-    $(".div-summary_form-btn").click(function () {//Lors du clic sur le bouton..
-        let tb = $("#form").serializeArray(); // Transforme les données du formulaire en un tableau d'objets de la forme
-        // Stockage de l'objet 'tb' dans le LocalStorage
-        let tbJson = JSON.stringify(tb);
-        localStorage.setItem('Infos de contact', tbJson);
-        // Affiche les résultats dans la console
-        console.log(tb); 
-    });
-});
-*/
