@@ -12,8 +12,9 @@
 }
 
 .bloc1 p{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
     font-size: 22px;
-    line-height: 24px;
 }
 
 .bloc1__title{
@@ -26,7 +27,7 @@
     padding-bottom: 20px;
 }
 
-.product-info{
+.bloc1 p{
     font-size: 24px;
     font-weight: bold;
     opacity: 75%;
@@ -43,7 +44,7 @@
 }
 
 /* product fuxi480 (bloc1) */
-.bloc1__product-fuxi480{
+.bloc1__product-zurss{
     background-color: #bdb3bb;
     height: 550px;
     margin-top: 50px;
@@ -51,18 +52,18 @@
     margin-right: 100px;
 }
 
-.bloc1__product-info-fuxi480{
+.card-camera-zurss{
     display: flex;
     flex-direction: column;
 }
 
-.bloc1__product-fuxi480 img{
+.bloc1__product-zurss img{
     float: left;
     padding: 70px;
 }
 
 /* product kiraS50 (bloc1) */
-.bloc1__product-kiraS50{
+.bloc1__product-hirsch{
     background-color: #bdb3bb;
     height: 550px;
     margin-top: 100px;
@@ -70,19 +71,19 @@
     margin-right: 100px;
 }
 
-.bloc1__product-info-kiraS50{
+.card-camera-hirsch{
     display: flex;
     flex-direction: column;
     padding-left: 70px;
 }
 
-.bloc1__product-kiraS50 img{
+.bloc1__product-hirsch img{
     float: right;
     padding: 70px;
 }
 
 /* product boki100T (bloc1) */
-.bloc1__product-boki100T{
+.bloc1__product-franck{
     background-color: #bdb3bb;
     height: 550px;
     margin-top: 100px;
@@ -90,18 +91,18 @@
     margin-right: 100px;
 }
 
-.bloc1__product-info-boki100T{
+.card-camera-franck{
     display: flex;
     flex-direction: column;
 }
 
-.bloc1__product-boki100T img{
+.bloc1__product-franck img{
     float: left;
     padding: 70px;
 }
 
 /* product tuxor (bloc1) */
-.bloc1__product-tuxor{
+.bloc1__product-kuros{
     background-color: #bdb3bb;
     height: 550px;
     margin-top: 100px;
@@ -109,20 +110,20 @@
     margin-right: 100px;
 }
 
-.bloc1__product-info-tuxor{
+.card-camera-kuros{
     display: flex;
     flex-direction: column;
     padding-left: 70px;
 }
 
-.bloc1__product-tuxor img{
+.bloc1__product-kuros img{
     float: right;
     padding: 70px;
 }
 
 
 /* product piker (bloc1) */
-.bloc1__product-piker{
+.bloc1__product-katatone{
     background-color: #bdb3bb;
     height: 550px;
     margin-top: 100px;
@@ -131,12 +132,12 @@
     margin-right: 100px;
 }
 
-.bloc1__product-info-piker{
+.card-camera-katatone{
     display: flex;
     flex-direction: column;
 }
 
-.bloc1__product-piker img{
+.bloc1__product-katatone img{
     float: left;
     padding: 70px;
 }
@@ -156,7 +157,7 @@
         font-size: 33px;
     }
 
-    .product-info{
+    .bloc1 p {
         font-size: 22px;
     }
 
@@ -164,19 +165,19 @@
         font-size: 20px;
     }
 
-    .bloc1__product-piker, .bloc1__product-tuxor, .bloc1__product-boki100T, .bloc1__product-kiraS50, .bloc1__product-fuxi480{
+    .bloc1__product-katatone, .bloc1__product-kuros, .bloc1__product-franck, .bloc1__product-hirsch, .bloc1__product-zurss{
         margin-left: 50px;
         margin-right: 50px;
         height: 900px;
     }
 
-    .bloc1__product-info-fuxi480, .bloc1__product-info-kiraS50, .bloc1__product-info-boki100T, .bloc1__product-info-tuxor, .bloc1__product-info-piker{
+    .card-camera-zurss, .card-camera-hirsch, .card-camera-franck, .card-camera-kuros, .card-camera-katatone{
         align-items: center;
         padding: 0px;
         margin: 0px;
     }
     
-    .bloc1__product-fuxi480 img, .bloc1__product-kiraS50 img, .bloc1__product-boki100T img, .bloc1__product-tuxor img, .bloc1__product-piker img{
+    .bloc1__product-zurss img, .bloc1__product-hirsch img, .bloc1__product-franck img, .bloc1__product-kuros img, .bloc1__product-katatone img{
         padding: 0px;
         margin: 0px;
         float: none;
@@ -205,13 +206,13 @@
         font-size: 11px;
     }
 
-    .bloc1__product-piker, .bloc1__product-tuxor, .bloc1__product-boki100T, .bloc1__product-kiraS50, .bloc1__product-fuxi480{
+    .bloc1__product-katatone, .bloc1__product-kuros, .bloc1__product-franck, .bloc1__product-hirsch, .bloc1__product-zurss{
         margin-left: 10px;
         margin-right: 10px;
         height: 700px;
     }
 
-    .bloc1__product-fuxi480 img, .bloc1__product-kiraS50 img, .bloc1__product-boki100T img, .bloc1__product-tuxor img, .bloc1__product-piker img{
+    .bloc1__product-zurss img, .bloc1__product-hirsch img, .bloc1__product-franck img, .bloc1__product-kuros img, .bloc1__product-katatone img{
         height: 150px;
         width: 150px;
     }

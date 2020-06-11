@@ -172,11 +172,11 @@ input {
   width: 50%;
   align-self: center; }
 
-.bloc1__product-fuxi480, .bloc1__product-kiraS50, .bloc1__product-boki100T, .bloc1__product-tuxor, .bloc1__product-piker, table, .summary_form, .img-customize, .order_confirmation_message {
+.bloc1__product-zurss, .bloc1__product-hirsch, .bloc1__product-franck, .bloc1__product-kuros, .bloc1__product-katatone, table, .summary_form, .img-customize, .order_confirmation_message {
   transform: scale(1);
   transition: transform 0.2s; }
 
-.bloc1__product-fuxi480:hover, .bloc1__product-kiraS50:hover, .bloc1__product-boki100T:hover, .bloc1__product-tuxor:hover, .bloc1__product-piker:hover, table:hover, .summary_form:hover, .img-customize:hover, .order_confirmation_message:hover {
+.bloc1__product-zurss:hover, .bloc1__product-hirsch:hover, .bloc1__product-franck:hover, .bloc1__product-kuros:hover, .bloc1__product-katatone:hover, table:hover, .summary_form:hover, .img-customize:hover, .order_confirmation_message:hover {
   transform: scale(1.05);
   opacity: 0.95; }
 
@@ -277,8 +277,9 @@ header a:hover {
   color: #3B2D39; }
 
 .bloc1 p {
-  font-size: 22px;
-  line-height: 24px; }
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #3B2D39;
+  font-size: 22px; }
 
 .bloc1__title {
   font-family: 'Roboto', Arial, sans-serif;
@@ -289,7 +290,7 @@ header a:hover {
   padding-top: 50px;
   padding-bottom: 20px; }
 
-.product-info {
+.bloc1 p {
   font-size: 24px;
   font-weight: bold;
   opacity: 75%; }
@@ -304,73 +305,73 @@ header a:hover {
   font-weight: bold; }
 
 /* product fuxi480 (bloc1) */
-.bloc1__product-fuxi480 {
+.bloc1__product-zurss {
   background-color: #bdb3bb;
   height: 550px;
   margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px; }
 
-.bloc1__product-info-fuxi480 {
+.card-camera-zurss {
   display: flex;
   flex-direction: column; }
 
-.bloc1__product-fuxi480 img {
+.bloc1__product-zurss img {
   float: left;
   padding: 70px; }
 
 /* product kiraS50 (bloc1) */
-.bloc1__product-kiraS50 {
+.bloc1__product-hirsch {
   background-color: #bdb3bb;
   height: 550px;
   margin-top: 100px;
   margin-left: 100px;
   margin-right: 100px; }
 
-.bloc1__product-info-kiraS50 {
+.card-camera-hirsch {
   display: flex;
   flex-direction: column;
   padding-left: 70px; }
 
-.bloc1__product-kiraS50 img {
+.bloc1__product-hirsch img {
   float: right;
   padding: 70px; }
 
 /* product boki100T (bloc1) */
-.bloc1__product-boki100T {
+.bloc1__product-franck {
   background-color: #bdb3bb;
   height: 550px;
   margin-top: 100px;
   margin-left: 100px;
   margin-right: 100px; }
 
-.bloc1__product-info-boki100T {
+.card-camera-franck {
   display: flex;
   flex-direction: column; }
 
-.bloc1__product-boki100T img {
+.bloc1__product-franck img {
   float: left;
   padding: 70px; }
 
 /* product tuxor (bloc1) */
-.bloc1__product-tuxor {
+.bloc1__product-kuros {
   background-color: #bdb3bb;
   height: 550px;
   margin-top: 100px;
   margin-left: 100px;
   margin-right: 100px; }
 
-.bloc1__product-info-tuxor {
+.card-camera-kuros {
   display: flex;
   flex-direction: column;
   padding-left: 70px; }
 
-.bloc1__product-tuxor img {
+.bloc1__product-kuros img {
   float: right;
   padding: 70px; }
 
 /* product piker (bloc1) */
-.bloc1__product-piker {
+.bloc1__product-katatone {
   background-color: #bdb3bb;
   height: 550px;
   margin-top: 100px;
@@ -378,11 +379,11 @@ header a:hover {
   margin-left: 100px;
   margin-right: 100px; }
 
-.bloc1__product-info-piker {
+.card-camera-katatone {
   display: flex;
   flex-direction: column; }
 
-.bloc1__product-piker img {
+.bloc1__product-katatone img {
   float: left;
   padding: 70px; }
 
@@ -397,23 +398,23 @@ header a:hover {
   .bloc1__title {
     font-size: 33px; }
 
-  .product-info {
+  .bloc1 p {
     font-size: 22px; }
 
   .home__end-text {
     font-size: 20px; }
 
-  .bloc1__product-piker, .bloc1__product-tuxor, .bloc1__product-boki100T, .bloc1__product-kiraS50, .bloc1__product-fuxi480 {
+  .bloc1__product-katatone, .bloc1__product-kuros, .bloc1__product-franck, .bloc1__product-hirsch, .bloc1__product-zurss {
     margin-left: 50px;
     margin-right: 50px;
     height: 900px; }
 
-  .bloc1__product-info-fuxi480, .bloc1__product-info-kiraS50, .bloc1__product-info-boki100T, .bloc1__product-info-tuxor, .bloc1__product-info-piker {
+  .card-camera-zurss, .card-camera-hirsch, .card-camera-franck, .card-camera-kuros, .card-camera-katatone {
     align-items: center;
     padding: 0px;
     margin: 0px; }
 
-  .bloc1__product-fuxi480 img, .bloc1__product-kiraS50 img, .bloc1__product-boki100T img, .bloc1__product-tuxor img, .bloc1__product-piker img {
+  .bloc1__product-zurss img, .bloc1__product-hirsch img, .bloc1__product-franck img, .bloc1__product-kuros img, .bloc1__product-katatone img {
     padding: 0px;
     margin: 0px;
     float: none;
@@ -434,12 +435,12 @@ header a:hover {
   .home__end-text {
     font-size: 11px; }
 
-  .bloc1__product-piker, .bloc1__product-tuxor, .bloc1__product-boki100T, .bloc1__product-kiraS50, .bloc1__product-fuxi480 {
+  .bloc1__product-katatone, .bloc1__product-kuros, .bloc1__product-franck, .bloc1__product-hirsch, .bloc1__product-zurss {
     margin-left: 10px;
     margin-right: 10px;
     height: 700px; }
 
-  .bloc1__product-fuxi480 img, .bloc1__product-kiraS50 img, .bloc1__product-boki100T img, .bloc1__product-tuxor img, .bloc1__product-piker img {
+  .bloc1__product-zurss img, .bloc1__product-hirsch img, .bloc1__product-franck img, .bloc1__product-kuros img, .bloc1__product-katatone img {
     height: 150px;
     width: 150px; }
 
@@ -535,7 +536,7 @@ header a:hover {
   display: flex;
   flex-direction: column; }
 
-#nom {
+#name {
   padding-top: 30px;
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 26px;
@@ -543,7 +544,7 @@ header a:hover {
   color: #3B2D39;
   font-weight: bold; }
 
-#prix, #marque, #lentilles, #description {
+#price, #lenses, #description {
   font-family: 'Roboto', Arial, sans-serif;
   color: #3B2D39;
   font-size: 22px; }
@@ -551,11 +552,11 @@ header a:hover {
 .img-customize {
   display: block;
   margin: auto;
-  height: 80%;
-  width: 80%;
-  margin-top: 30px; }
+  height: 50%;
+  width: 50%; }
 
 .bloc3_customize_items {
+  padding: 40px;
   display: flex;
   flex-direction: column; }
 
@@ -564,10 +565,10 @@ header a:hover {
     display: block;
     margin: auto; } }
 @media (max-width: 650px) {
-  #nom {
+  #name {
     font-size: 22px; }
 
-  #prix, #marque, #lentilles, #description {
+  #price, #lenses, #description {
     font-size: 18px; }
 
   #bloc3 p {

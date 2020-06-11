@@ -23,7 +23,7 @@
     flex-direction: column;
 }
 
-#nom{
+#name{
     padding-top: 30px;
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 26px;
@@ -32,7 +32,7 @@
     font-weight: bold;
 }
 
-#prix, #marque, #lentilles, #description{
+#price, #lenses, #description{
     font-family: 'Roboto', Arial, sans-serif;
     color: #3B2D39;
     font-size: 22px;
@@ -41,12 +41,13 @@
 .img-customize{
     display: block;
     margin: auto;
-    height:80%;
-    width: 80%;
-    margin-top: 30px;
+    height:50%;
+    width: 50%;
+
     }
 
 .bloc3_customize_items{
+    padding: 40px;
     display: flex;
     flex-direction: column;
 }
@@ -60,11 +61,11 @@
 
 @media (max-width: 650px){
 
-    #nom {
+    #name {
         font-size: 22px;
     }
 
-    #prix, #marque, #lentilles, #description{
+    #price, #lenses, #description{
         font-size: 18px;
     }
 
