@@ -29,13 +29,13 @@ input{
     border: none;
 }
 
-#name:valid, #first-name:valid, #mail:valid, #delivery-adress:valid, #department:valid, #city:valid, #country:valid, #phone-number:valid{
+#nom:valid, #first-name:valid, #mail:valid, #delivery-adress:valid, #department:valid, #city:valid, #country:valid, #phone-number:valid{
     border: solid 1px #16d23f;
     opacity: 0.9;
     background-color: #fbe0e6;
 }
 
-#name:focus, #first-name:focus, #mail:focus, #delivery-adress:focus, #department:focus, #city:focus, #country:focus, #phone-number:focus{
+#nom:focus, #first-name:focus, #mail:focus, #delivery-adress:focus, #department:focus, #city:focus, #country:focus, #phone-number:focus{
     border: solid 1px #d2163c;
     opacity: 0.9;
     background-color: #fbe0e6;

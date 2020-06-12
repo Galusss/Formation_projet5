@@ -77,10 +77,27 @@
     margin-bottom: 50px;
 }
 
-.btn-return-home:hover{
+.btn-return-home:hover, #btn-tableau:hover{
     opacity: 0.75;
     color: black;
     font-weight: bold;
 }
+
+#btn-tableau{
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #F4EBF2;
+    color: #3B2D39;
+    font-size: 22px;
+    border: solid 2px #3B2D39;
+    border-radius: 8px;
+    width: 320px;
+    height: 60px;
+    margin-top: 20px;
+}
+
+
+
+
+
 
 

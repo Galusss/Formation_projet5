@@ -3,8 +3,7 @@ table{
     border-collapse: collapse;
     width: 1000px;
     height: 200px;
-    text-align: center;
-    margin-top: 30px;
+    text-align: center; 
 }
 
 td{
@@ -14,9 +13,10 @@ td{
     font-family: 'Roboto', Arial, sans-serif;
     color: #3B2D39;
     width: 200px;
+    height: 30%;
 }
 
-.summary_table_line1{
+#table_product{
     background-color: #bdb3bb;
 }
 
