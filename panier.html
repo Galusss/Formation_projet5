@@ -83,45 +83,35 @@
                     <button id="btn-tableau">Vider le panier</button>
 
                     <div class="summary_form">
-                        <form  method="POST" id="form">
+                        <form  action="confirmation.html" method="POST" name="form" id="forms">
                             <h2>Vos coordonnées :</h2>
                             <div>
                                 <label for="nom">Nom :</label>
-                                <input type="text" name="nom" id="nom" maxlength="15" required />
+                                <input type="text" name="nom" maxlength="15" required />
                             </div>
                             <div>
                                 <label for="first-name">Prénom :</label>
-                                <input type="text" name="first-name" id="first-name" maxlength="15" required />
+                                <input type="text" name="first-name" maxlength="15" required />
                             </div>
                             <div>
                                 <label for="mail">E-mail :</label>
-                                <input type="email" name="mail" id="mail" maxlength="35" required />
-                            </div>
-                            <div>
-                                <label for="phone-number">Téléphone :</label>
-                                <input type="tel" name="phone-number" id="phone-number" minlength="8" maxlength="10" required />
+                                <input type="email" name="mail" maxlength="35" required />
                             </div>
                             <h2>Adresse de livraison :</h2>
                             <div>
-                                <label for="delivery-adress">Adresse :</label>
-                                <input type="text" name="delivery-adress" id="delivery-adress" minlength="10" maxlength="35" required />
-                            </div>
-                            <div>
-                                <label for="department">Code postal :</label>
-                                <input type="text" name="department" id="department" minlength="5" maxlength="5" required />
+                                <label for="adress">Adresse :</label>
+                                <input type="text" name="adress" minlength="10" maxlength="35" required />
                             </div>
                             <div>
                                 <label for="city">Ville :</label>
-                                <input type="text" name="city" id="city" maxlength="15" required />
-                            </div>
-                            <div>
-                                <label for="country">Pays :</label>
-                                <input type="text" name="country" id="country" maxlength="15" required />
-                            </div>
+                                <input type="text" name="city" maxlength="15" required />
+                            </div>                         
                             <div class="div-summary_form-btn">
-                                <button type="submit" class="summary_form-btn" aria-label="Confirmer votre commande chez Oricono">
+                                <button type="submit" id="summary_form-btn" aria-label="Confirmer votre commande chez Oricono">
                                     Confirmer la commande
                                 </button>
+                                <input id="orderId" name="id" type="hidden" value="">
+                                <input id="totalPrix" name="total" type="hidden" value="">
                             </div>
                         </form>
                     </div>

@@ -17,8 +17,6 @@ request.onload = function () {
         price.innerHTML = "Prix : " + produits.price + " €";
     }
 
-
-
     function imgProduit() { // Permet de créer l'image du produit.
         let img = document.createElement("img");
         let imgParent = document.getElementById("imgParent");
@@ -28,16 +26,12 @@ request.onload = function () {
         img.setAttribute("alt", "Personnalier votre caméra pour valider votre commande chez Oricono.");
     }
 
-
-
     // Envoie la valeur des lentilles dans la premiere option du formulaire (les autres options s'adaptent plus tard selon le nombre de choix de lentille du produit)
     function formLense1() {
         let lense1 = document.getElementById("lense1");
         lense1.setAttribute("value", produits.lenses[0]);
         lense1.innerHTML = produits.lenses[0];
     }
-
-
 
     // Envoie les valeurs du produit dans le formulaire (ces infos ne sont pas visible pas l'utilisateur, cela permet d'envoyer des données vers la page panier.html)
     function formInfo() {
