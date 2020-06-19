@@ -1,5 +1,4 @@
-//PANIER.HTML CONTACT FORM
-.contact-form{
+.summary_form{
     background-color: #bdb3bb;
     padding-left: 50px;
     padding-right: 50px;
@@ -10,36 +9,50 @@
     margin-top: 100px;
     border: solid 2px #3B2D39;
 }
-.contact-form h2{
+
+form h2{
     text-align: center;
 }
-.contact-form label {
+
+.summary_form label {
     width: 110px;
     display: inline-block;
     vertical-align: middle;
+    font-size: 20px;
+    color: black;
 }
-.contact-form input{
+
+input{
     width: 400px;
     height: 30px;
     margin: 20px;
     border: none;
 }
 
-//PRODUIT.HTML CHOICE LENSES FORM
-.choice-lenses{
-    display: flex;
-    flex-direction: column;
+#nom:valid, #first-name:valid, #mail:valid, #delivery-adress:valid, #department:valid, #city:valid, #country:valid, #phone-number:valid{
+    border: solid 1px #16d23f;
+    opacity: 0.9;
+    background-color: #fbe0e6;
 }
-.choice-lenses label{
+
+#nom:focus, #first-name:focus, #mail:focus, #delivery-adress:focus, #department:focus, #city:focus, #country:focus, #phone-number:focus{
+    border: solid 1px #d2163c;
+    opacity: 0.9;
+    background-color: #fbe0e6;
+}
+
+.choice-lenses__label{
     width: 100%;
+    font-size: 30px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 25px;
 }
+
 .choice-lenses select{
     margin-bottom: 45px;
     width: 50%;
-    height: 25px;
     align-self: center;
 }
-

@@ -1,4 +1,3 @@
-//PANIER.HTML ORDER SUMMARY
 table{
     border: medium solid #3B2D39;
     border-collapse: collapse;
@@ -6,12 +5,18 @@ table{
     height: 200px;
     text-align: center; 
 }
+
 td{
     border: thin solid #3B2D39;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
     width: 200px;
     height: 30%;
 }
-.table-category, 
-.total{
+
+#table_product{
     background-color: #bdb3bb;
 }
+

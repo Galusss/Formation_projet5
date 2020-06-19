@@ -1,0 +1,45 @@
+.bloc0{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloc0__img-banniere{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.bloc0__title{
+    position: absolute;
+    z-index: 10;
+    background: transparent;
+    text-align: center;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.bloc0__title h2{
+    font-size: 36px;
+    color: white;
+}
+
+.bloc0__title-h2-shopping_basket, .bloc0__title-h2-order-confirmation{
+    color: #00FF00;
+}
+
+.bloc0__title p{
+    font-size: 22px;
+    color: white;
+}
+
+/* responsive */
+@media (max-width: 650px){
+
+    .bloc0__title h2{
+        font-size: 28px;
+    }
+
+    .bloc0__title p{
+        font-size: 18px;
+    }
+}

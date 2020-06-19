@@ -1,4 +1,5 @@
-.order-div{
+/* BLOC 2 */ 
+.bloc2{
     background-color: #F4EBF2;
     display: flex;
     flex-direction: column;
@@ -7,15 +8,24 @@
     padding-bottom: 70px;
 }
 
-.order h2{
-    margin-top: 50px;
+h1, h2{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 32px;
 }
 
-.end-text_panier{
+.panier-end-text{
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
     padding-top: 70px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.panier__main-section h1, .panier__main-section h2{
+    margin-top: 50px;
 }
 
 @media (max-width: 1100px){
@@ -31,11 +41,15 @@
     }
     td{
         width: 250px;
+        font-size: 14px;
     }
 
-    .contact-form{
+    .summary_form{
         margin-right: 20px;
         margin-left: 20px;
+    }
+    .panier-end-text{
+        font-size: 20px;
     }
 
     form{
@@ -46,6 +60,7 @@
     }
     label{
         width: 80px;
+        font-size: 14px;
     }
 }
 
@@ -56,9 +71,19 @@
     label{
         width: 90px;
     }
+    .panier-end-text{
+        font-size: 11px;
+    }
 
-    .confirm-order{
+    .panier__main-section h1, .panier__main-section h2{
+        font-size: 22px;
+    }
+    .summary_form h2{
+        font-size: 18px;
+    }
+    .summary_form-btn{
         width: 200px;
+        font-size: 14px;
     }
 }
 
@@ -66,5 +91,11 @@
     table{
         width: auto;
         margin: 20px;     
+    }
+    td{
+        font-size: 11px;
+    }
+    .panier__main-section h2{
+        font-size: 17px;
     }
 }

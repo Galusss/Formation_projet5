@@ -1,76 +1,183 @@
-.catalog{
+/* BLOC1 */
+.bloc1{
+    background-color: #F4EBF2;
+    padding-bottom: 50px;
+}
+
+.bloc1 h3{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 26px;
+    padding-top: 20px;
+    color: #3B2D39;
+}
+
+.bloc1 p{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 22px;
+}
+
+.bloc1__title{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 35px;
     text-align: center;
-    margin: 0px;
-    padding-top: 50px ;
-    background-color: #F4EBF2;
-}
-
-#products-dynamic{
-    background-color: #F4EBF2;
     margin: 0;
-    padding: 0px ;
+    padding-top: 50px ;
+    padding-bottom: 20px;
 }
 
-.hidden{
-    display: none;
+.bloc1 p{
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 75%;
 }
 
-#products{
-    padding-bottom: 100px;
-    padding-top: 50px;
-}
-
-#product-card{
-    background-color: #bdb3bb;
-    height: 550px;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-.infos-card{
-    display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-}
-
-#product-card img{
-    float: left;
-    padding: 70px;
-}
-
-.end-text_index{
+.end-text{
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
     padding-top: 70px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-#product-card{
-    transform: scale(1);
-    transition: transform 0.2s;
+/* product fuxi480 (bloc1) */
+.bloc1__product-zurss{
+    background-color: #bdb3bb;
+    height: 550px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
-#product-card:hover{
-    transform: scale(1.05);
-    opacity: 0.95;
+.card-camera-zurss{
+    display: flex;
+    flex-direction: column;
 }
 
-/* responsive (products) */
+.bloc1__product-zurss img{
+    float: left;
+    padding: 70px;
+}
+
+/* product kiraS50 (bloc1) */
+.bloc1__product-hirsch{
+    background-color: #bdb3bb;
+    height: 550px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.card-camera-hirsch{
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+}
+
+.bloc1__product-hirsch img{
+    float: right;
+    padding: 70px;
+}
+
+/* product boki100T (bloc1) */
+.bloc1__product-franck{
+    background-color: #bdb3bb;
+    height: 550px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.card-camera-franck{
+    display: flex;
+    flex-direction: column;
+}
+
+.bloc1__product-franck img{
+    float: left;
+    padding: 70px;
+}
+
+/* product tuxor (bloc1) */
+.bloc1__product-kuros{
+    background-color: #bdb3bb;
+    height: 550px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.card-camera-kuros{
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+}
+
+.bloc1__product-kuros img{
+    float: right;
+    padding: 70px;
+}
+
+
+/* product piker (bloc1) */
+.bloc1__product-katatone{
+    background-color: #bdb3bb;
+    height: 550px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.card-camera-katatone{
+    display: flex;
+    flex-direction: column;
+}
+
+.bloc1__product-katatone img{
+    float: left;
+    padding: 70px;
+}
+
+/* responsive (bloc1) */
 @media (max-width: 1100px){
 
-    #product-card{
+    .bloc1 h3{
+        font-size: 24px;
+    }
+
+    .bloc1 p{
+        font-size: 20px;
+    }
+
+    .bloc1__title{
+        font-size: 33px;
+    }
+
+    .bloc1 p {
+        font-size: 22px;
+    }
+
+    .home__end-text{
+        font-size: 20px;
+    }
+
+    .bloc1__product-katatone, .bloc1__product-kuros, .bloc1__product-franck, .bloc1__product-hirsch, .bloc1__product-zurss{
         margin-left: 50px;
         margin-right: 50px;
         height: 900px;
     }
 
-    .infos-card{
+    .card-camera-zurss, .card-camera-hirsch, .card-camera-franck, .card-camera-kuros, .card-camera-katatone{
         align-items: center;
         padding: 0px;
         margin: 0px;
     }
     
-    #product-card img{
+    .bloc1__product-zurss img, .bloc1__product-hirsch img, .bloc1__product-franck img, .bloc1__product-kuros img, .bloc1__product-katatone img{
         padding: 0px;
         margin: 0px;
         float: none;
@@ -82,14 +189,36 @@
 }
 
 @media (max-width: 650px){
-    #product-card{
+
+    .bloc1 h3{
+        font-size: 20px;
+    }
+
+    .bloc1 p{
+        font-size: 16px;
+    }
+
+    #bloc3 h2{
+        font-size: 29px;
+    }
+
+    .home__end-text{
+        font-size: 11px;
+    }
+
+    .bloc1__product-katatone, .bloc1__product-kuros, .bloc1__product-franck, .bloc1__product-hirsch, .bloc1__product-zurss{
         margin-left: 10px;
         margin-right: 10px;
         height: 700px;
     }
 
-    #product-card img{
+    .bloc1__product-zurss img, .bloc1__product-hirsch img, .bloc1__product-franck img, .bloc1__product-kuros img, .bloc1__product-katatone img{
         height: 150px;
         width: 150px;
+    }
+
+    .bloc1__btn-select-product{
+        height: 45px;
+        width: 200px;
     }
 }

@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+/* Focus */
+.focus_header:focus{
+    border-radius: 30px;
+    background-color: #F4EBF2;
+    outline: none;
+    padding: 2px;
+}
+
+.bloc1__btn-select-product:focus, .btn_product-validate-focus:focus, .btn-retunr-home-focus:focus, .btn-customize:focus{
+    border-radius: 8px;
+    background-color: #8c828a;
+    outline: none;
+}
+
+.focus_customize-product-form:focus{
+    background-color: #8c828a;
+    outline: none;
+}
