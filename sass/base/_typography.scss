@@ -1,0 +1,296 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+ul{
+    list-style: none;
+}
+
+
+/* =======================================================
+========================================================== 
+FONTS STYLE 
+==========================================================
+======================================================= */
+
+//GLOBAL
+h2{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 45px;
+}
+.btn{ //Main Button
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 22px;
+}
+
+//HEADER
+header h1, 
+header a{
+    font-family: 'Teko', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #3B2D39;
+}
+
+//BANNER
+.banner-title{
+    font-family: 'Roboto', Arial, sans-serif;
+}
+.banner-title h2{
+    font-size: 36px;
+    color: white;
+}
+.banner-title p{
+    font-size: 22px;
+    color: white;
+}
+
+//INDEX.HTML
+#cardName{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 32px;
+    padding-top: 20px;
+    color: #3B2D39;
+}
+#cardPrice, #cardDescription, #cardLenses{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+.end-text_index{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+//PRODUIT.HTML
+.choice-lenses select{ //Form choice lenses
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    color: #000000;
+}
+.choice-lenses label{
+    font-size: 30px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+}
+.name{
+   color: #3B2D39;
+    font-weight: bold;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 26px;
+}
+.price, 
+.lenses, 
+.description{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 22px;
+}
+.end-text_product{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+//PANIER.HTML
+.contact-form label { // Form contact
+    font-size: 20px;
+    color: black;
+}
+td{ //Table order summary
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+}
+.end-text_panier{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+//CONFIRMATION.HTML
+.order-confirm_text{
+    font-size: 22px;
+}
+.end-text_confirm{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+//FOOTER
+.footer p{
+    font-size: 11px;
+    color: #000000;
+}
+
+/* =======================================================
+========================================================== 
+FONTS STYLE (RESPONSIVE)
+==========================================================
+======================================================= */
+@media (max-width: 450px){
+    td{
+        font-size: 11px;
+    }
+    .order h2{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 550px){
+    .end-text_panier{
+        font-size: 11px;
+    }
+
+    .order h1, 
+    .order h2{
+        font-size: 22px;
+    }
+    .contact-form h2{
+        font-size: 18px;
+    }
+    .confirm-order{        
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 650px){
+
+    header h1,
+    header a{
+        font-size: 18px;
+    }
+
+    .banner-title h2{ 
+        font-size: 28px;
+    }
+
+    .banner-title p{
+        font-size: 18px;
+    }
+
+    .products h3{
+        font-size: 20px;
+    }
+
+    .products p{
+        font-size: 16px;
+    }
+
+    #bloc3 h2{
+        font-size: 29px;
+    }
+
+    .end-text_index{
+        font-size: 11px;
+    }
+
+    .order-confirm h2{
+        font-size: 20px;
+    }
+
+    .order-confirm_text p{
+        font-size: 16px;
+    }
+
+    .end-text_confirm{
+        font-size: 11px;
+    }
+    .name {
+        font-size: 22px;
+    }
+
+    .price, 
+    .lenses, 
+    .description{
+        font-size: 18px;
+    }
+
+    .product-select p{
+        font-size: 14px;
+    }
+
+    .product-select h2{
+        font-size: 24px;
+    }
+
+    .choice-lenses label{
+        font-size: 22px;
+    }
+
+    .end-text_product{
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 850px){
+    td{
+        font-size: 14px;
+    }
+
+    .end-text_panier{
+        font-size: 20px;
+    }
+
+    label{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1050px){
+    
+    .order-confirm h2{
+        font-size: 24px;
+    }
+
+    .order-confirm_text p{
+        font-size: 18px;
+    }
+
+    .end-text_confirm{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1100px){
+
+    .products h3{
+        font-size: 24px;
+    }
+
+    .products p{
+        font-size: 20px;
+    }
+
+    .products h2{
+        font-size: 33px;
+    }
+
+    .products p {
+        font-size: 22px;
+    }
+
+    .end-text_index{
+        font-size: 20px;
+    }
+}

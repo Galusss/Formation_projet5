@@ -1,5 +1,4 @@
-/* BLOC 4 */ 
-.bloc4{
+.order-confirm{
     background-color: #F4EBF2;
     display: flex;
     flex-direction: column;
@@ -7,62 +6,42 @@
     padding-bottom: 90px;
 }
 
-.bloc4 h2{
+.order-confirm h2{
     padding-top: 30px;
     padding-bottom: 15px;
     text-align: center;
 }
 
-.order-confirmation__end-text{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 50px;
-    padding-top: 70px;
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
+.order-confirm_text h2{
+    padding-top: 30px;
+    margin-bottom: -10px;
 }
 
-.order_confirmation_message{
+.order-confirm_text{
     background-color: #bdb3bb;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
     padding: 30px;
-}
-
-.order_confirmation_message-bold{
-    font-weight: bold;
-}
-
-.order_confirmation_message h2{
-    padding-top: 30px;
-    margin-bottom: -10px;
-}
-
-.order_confirmation_message p{
-    font-size: 22px;
     line-height: 40px;
 }
 
+.end-text_confirm{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 70px;
+}
+
 @media (max-width: 1050px){
-    .order_confirmation_message{
+    .order-confirm_text{
         margin-left: 20px;
         margin-right: 20px;
     }
-
-    .bloc4 h2{
-        font-size: 24px;
-    }
-
-    .order_confirmation_message p{
-    font-size: 18px;
+    
+    .order-confirm_text p{
     line-height: 26px;
-    }
-
-    .order-confirmation__end-text{
-        font-size: 22px;
     }
 
     .btn-return-home{
@@ -70,16 +49,3 @@
     }
 }
 
-@media (max-width: 650px){
-    .bloc4 h2{
-        font-size: 20px;
-    }
-
-    .order_confirmation_message p{
-    font-size: 16px;
-    }
-
-    .order-confirmation__end-text{
-        font-size: 11px;
-    }
-}

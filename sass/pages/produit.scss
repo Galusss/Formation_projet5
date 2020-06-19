@@ -1,41 +1,16 @@
-/* BLOC 3 */ 
-#bloc3{
+.product-select{
     background-color: #F4EBF2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
+    padding-bottom: 90px;
     padding-top: 30px;
+    padding: 40px;
 }
 
-.product__end-text{
-    padding-bottom: 50px;
-    padding-top: 70px;
-    display: flex;
-    justify-content: center;
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.choice-lenses{
-    display: flex;
-    flex-direction: column;
-}
-
-#name{
+.name{
     padding-top: 30px;
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 26px;
     padding-top: 20px;
-    color: #3B2D39;
-    font-weight: bold;
-}
-
-#price, #lenses, #description{
-    font-family: 'Roboto', Arial, sans-serif;
-    color: #3B2D39;
-    font-size: 22px;
 }
 
 .img-customize{
@@ -43,13 +18,13 @@
     margin: auto;
     height:50%;
     width: 50%;
+}
 
-    }
-
-.bloc3_customize_items{
-    padding: 40px;
+.end-text_product{
+    padding-bottom: 50px;
+    padding-top: 70px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
 @media (max-width: 1300px){
@@ -60,30 +35,6 @@
 }
 
 @media (max-width: 650px){
-
-    #name {
-        font-size: 22px;
-    }
-
-    #price, #lenses, #description{
-        font-size: 18px;
-    }
-
-    #bloc3 p{
-        font-size: 14px;
-    }
-
-    #bloc3 h2{
-        font-size: 24px;
-    }
-
-    .choice-lenses-label{
-        font-size: 22px;
-    }
-
-    .product__end-text{
-        font-size: 11px;
-    }
     .btn-customize{
         width: 200px;
     }
