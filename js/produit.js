@@ -1,145 +1,135 @@
-// Requête GET vers API afin de récupérer les données des produits.
-let request = new XMLHttpRequest();
-request.open('GET', "http://localhost:3000/api/cameras");
-request.responseType = 'json';
-request.send();
-request.onload = function () {
-    let produits = request.response; // Stock toute les données des produits dans un tableau de la taille du nombre de produit.
+/*======================================================= 
+GET call to API with Ajax and Fetch
+=======================================================*/
+const getProducts = async function () { // Create an async function
+    let response = await fetch('http://localhost:3000/api/cameras/'); // Wait for the response from the server that contains the product data
+    if (response.ok) { // IF the answer is "ok"
+        let data = await response.json() // Wait for conversion of json response to object
+        for (let i = 0; i < data.length; i++) { // Create a loop that traverses all the data
+            function showProducts() { // Create a function that stores and displays my products
+                const product = function (id, imageUrl, name, lenses, price, description) { // Create a object that stores the products
+                    this.id = id;
+                    this.imageUrl = imageUrl;
+                    this.name = name;
+                    this.lenses = lenses;
+                    this.price = price;
+                    this.description = description;
+                }       
+                const products = new product(data[i]._id, data[i].imageUrl, data[i].name, data[i].lenses, data[i].price, data[i].description); // Add the products in the object
 
+                /*=======================================================
+                Display product information if the id is present in the window.location.search
+                =======================================================*/
+                let searchId = "?" + products.id;
+                if (window.location.search.indexOf(searchId) > -1) { // IF the location.search is identical to the product id
 
+                    /*=======================================================
+                    Dynamically create and display content with product information
+                    =======================================================*/
+                    let productCardParent = document.getElementById("custom-and-select"); // Get the div of the section and create the content starting from this div
+                    let productSelect = document.createElement("div"); // New div
+                    productCardParent.appendChild(productSelect);
+                    productSelect.setAttribute("class", "product-select");
+                    let imgParent = document.createElement("div"); // New div
+                    productSelect.appendChild(imgParent);
+                    imgParent.setAttribute("class", "imgParent");
+                    let imgProduct = document.createElement("img"); // New img (product image)
+                    imgParent.appendChild(imgProduct);
+                    imgProduct.setAttribute("src", products.imageUrl);
+                    imgProduct.classList.add("img-customize");
+                    imgProduct.setAttribute("alt", "Personnalier votre caméra pour valider votre commande chez Oricono.");
+                    let productName = document.createElement("p"); // New p (product name)
+                    productSelect.appendChild(productName);
+                    productName.setAttribute("class", "name");
+                    productName.innerHTML = products.name;
+                    let productLenses = document.createElement("p"); // New p (product lenses)
+                    productSelect.appendChild(productLenses);
+                    productLenses.setAttribute("class", "lenses");
+                    productLenses.innerHTML = "Lentilles : " + products.lenses;
 
-    function infosProduit(){ // Permet de modifier toute les informations du produit.
-        let name = document.getElementById("name");
-        let description = document.getElementById("description");
-        let price = document.getElementById("price");
-        name.innerHTML = produits.name;
-        description.innerHTML = "Description : " + produits.description;
-        price.innerHTML = "Prix : " + produits.price + " €";
-    }
+                    /*=======================================================
+                    Display adaptable with the number of product lenses
+                    =======================================================*/
+                    if (products.lenses.length === 1) {                     
+                        productLenses.innerHTML = products.lenses[0];
+                    } else if (products.lenses.length === 2) {
+                        productLenses.innerHTML = products.lenses[0] + " ou " + products.lenses[1];
+                    } else if (products.lenses.length === 3) {
+                        productLenses.innerHTML = products.lenses[0] + " ou " + products.lenses[1] + " ou " + products.lenses[2];
+                    }
+                    let productDescription = document.createElement("p"); // New p (product description)
+                    productSelect.appendChild(productDescription);
+                    productDescription.setAttribute("class", "description");
+                    productDescription.innerHTML = products.description;
+                    let productPrice = document.createElement("p"); // New p (product price)
+                    productSelect.appendChild(productPrice);
+                    productPrice.setAttribute("class", "price");
+                    productPrice.innerHTML = products.price + " €";
 
-    function imgProduit() { // Permet de créer l'image du produit.
-        let img = document.createElement("img");
-        let imgParent = document.getElementById("imgParent");
-        imgParent.appendChild(img);
-        img.setAttribute("src", produits.imageUrl);
-        img.classList.add("img-customize");
-        img.setAttribute("alt", "Personnalier votre caméra pour valider votre commande chez Oricono.");
-    }
+                    /*=======================================================
+                    Create a form to choose lenses
+                    =======================================================*/
+                    let lenseSelectForm = document.createElement("form"); // New form (lenses selection form)
+                    productSelect.appendChild(lenseSelectForm);
+                    lenseSelectForm.setAttribute("action", "panier.html");
+                    lenseSelectForm.setAttribute("method", "POST");
+                    let divForm = document.createElement("div"); // New div
+                    lenseSelectForm.appendChild(divForm);
+                    divForm.setAttribute("class", "choice-lenses");
+                    let labelForm = document.createElement("label"); // New label
+                    divForm.appendChild(labelForm);
+                    labelForm.setAttribute("for", "formLenses");
+                    labelForm.innerHTML = "Choisissez vos lentilles :";
+                    let selectForm = document.createElement("select"); // New select
+                    labelForm.appendChild(selectForm);
+                    selectForm.setAttribute("for", "formLenses");
+                    selectForm.setAttribute("name", "formLenses");
+                    selectForm.setAttribute("class", "select-lenses");
+                    selectForm.setAttribute("aria-label", "Choisissez une lentilles");           
+                    let divBtn = document.createElement("div"); // New div
+                    divForm.appendChild(divBtn);
+                    let btn = document.createElement("button"); // New btn (validation form button)
+                    divBtn.appendChild(btn);
+                    btn.setAttribute("type", "submit");
+                    btn.setAttribute("class", "btn");
+                    btn.classList.add("btn-customize");
+                    btn.setAttribute("aria-label", "Valider votre produit et dirigez vous vers votre panier Oricono");
+                    btn.innerHTML = "Valider";
+                    for (let i = 0; i < products.lenses.length; i++) { // Create a loop that searches for all the lenses in the product
+                        let optionForm = document.createElement("option"); // New option
+                        selectForm.appendChild(optionForm);
+                        optionForm.setAttribute("id", "lense");
+                        optionForm.setAttribute("value", products.lenses[i]);
+                        optionForm.setAttribute("selected", "false");
+                        optionForm.innerHTML = products.lenses[i];
 
-    // Envoie la valeur des lentilles dans la premiere option du formulaire (les autres options s'adaptent plus tard selon le nombre de choix de lentille du produit)
-    function formLense1() {
-        let lense1 = document.getElementById("lense1");
-        lense1.setAttribute("value", produits.lenses[0]);
-        lense1.innerHTML = produits.lenses[0];
-    }
-
-    // Envoie les valeurs du produit dans le formulaire (ces infos ne sont pas visible pas l'utilisateur, cela permet d'envoyer des données vers la page panier.html)
-    function formInfo() {
-        let formName = document.getElementById("formName");
-        let formPrice = document.getElementById("formPrice");
-        let formId = document.getElementById("formId");
-        formName.setAttribute("value", produits.name);
-        formPrice.setAttribute("value", produits.price);
-        formId.setAttribute("value", produits._id);
-    }
-    
-
-
-    // Affiche les bonne informations celon le paramètre "hash" de l'URL ; Des options pour le choix de lentille sont également ajouter dans le formulaire celon le produit
-    let formLenses = document.getElementById("formLenses");
-    if (window.location.hash === "#5be1ed3f1c9d44000030b061") { // Premier produit
-        produits = produits[0];
-        lenses.innerHTML = "Lentilles : " + produits.lenses[0] + " ou " + produits.lenses[1];
-        let lense2 = document.createElement("option");
-        formLenses.appendChild(lense2);
-        lense2.setAttribute("value", produits.lenses[1]);
-        lense2.innerHTML = produits.lenses[1];
-        imgProduit()
-        infosProduit()
-        formLense1()
-        formInfo()
-    } else if (window.location.hash === "#5be1ef211c9d44000030b062") { // Second produit
-        produits = produits[1];
-        lenses.innerHTML = "Lentilles : " + produits.lenses[0] + " ou " + produits.lenses[1] + " ou " + produits.lenses[2];
-        let lense2 = document.createElement("option");
-        formLenses.appendChild(lense2);
-        lense2.setAttribute("value", produits.lenses[1]);
-        lense2.innerHTML = produits.lenses[1];
-        let lense3 = document.createElement("option");
-        formLenses.appendChild(lense3);
-        lense3.setAttribute("value", produits.lenses[2]);
-        lense3.innerHTML = produits.lenses[2];
-        imgProduit()
-        infosProduit()
-        formLense1()
-        formInfo()
-    } else if (window.location.hash === "#5be9bc241c9d440000a730e7") { // Troisième produit
-        produits = produits[2];
-        lenses.innerHTML = "Lentilles : " + produits.lenses[0];
-        imgProduit()
-        infosProduit()
-        formLense1()
-        formInfo()
-    } else if (window.location.hash === "#5be9c4471c9d440000a730e8") { // Quatrième produit
-        produits = produits[3];
-        lenses.innerHTML = "Lentilles : " + produits.lenses[0] + " ou " + produits.lenses[1];
-        let lense2 = document.createElement("option");
-        formLenses.appendChild(lense2);
-        lense2.setAttribute("value", produits.lenses[1]);
-        lense2.innerHTML = produits.lenses[1];
-        imgProduit()
-        infosProduit()
-        formLense1()
-        formInfo()
-    } else if (window.location.hash === "#5be9c4c71c9d440000a730e9") { // Cinquième produit
-        produits = produits[4];
-        lenses.innerHTML = "Lentilles : " + produits.lenses[0] + " ou " + produits.lenses[1] + " ou " + produits.lenses[2];
-        let lense2 = document.createElement("option");
-        formLenses.appendChild(lense2);
-        lense2.setAttribute("value", produits.lenses[1]);
-        lense2.innerHTML = produits.lenses[1];
-        let lense3 = document.createElement("option");
-        formLenses.appendChild(lense3);
-        lense3.setAttribute("value", produits.lenses[2]);
-        lense3.innerHTML = produits.lenses[2];
-        imgProduit()
-        infosProduit()
-        formLense1()
-        formInfo()
+                        /*=======================================================
+                        When the form is submitted
+                        =======================================================*/
+                        lenseSelectForm.addEventListener("submit", function (event) { // Create event function
+                            if (optionForm.selected === true) { // IF option is select              
+                                var productSelected = JSON.parse(sessionStorage.getItem("productSelected") || "[]"); // Define storage in javascript object
+                                if (productSelected.length < 5) { // IF there are less than 3 products stored
+                                    let data = { // Get the values of the selected products
+                                        id: products.id,
+                                        name: products.name,
+                                        price: products.price,
+                                        lenses: optionForm.value
+                                    };
+                                    productSelected.push(data); // Add an element to the object data
+                                    sessionStorage.setItem("productSelected", JSON.stringify(productSelected)); // Store product in sessionStorage
+                                } else { // ELSE
+                                    alert("Vous devez vider votre panier avant de commander un nouveau produit.")
+                                }        
+                           }
+                        });
+                    }
+                }
+            } 
+            showProducts()
+        } 
+    } else { // ELSE (the server response is not "ok")
+        console.error("Retour du serveur :", response.status); // Displays an error message with the status code of the request
     }
 }
-
-
-
-document.querySelector("#form_customize").addEventListener("submit", function(e){ // Evenement lors de l'envoie du formulaire
-    // Récupères les valeurs du formulaire lors de son envoie pour les stocké dans le sessionStorage
-    let RecupId = document.querySelector("input[name='id']").value; 
-    let RecupName = document.querySelector("input[name='name']").value;
-    let RecupPrice = document.querySelector("input[name='price']").value;
-    let RecupLenses = document.querySelector("option").value;
-    let data ={
-        id: RecupId,
-        name: RecupName,
-        price: RecupPrice,
-        lenses: RecupLenses
-    }
-    // Création d'une nouvelle clé sessionStorage celon le nombre de produits stockés dans le session storage
-    let dataJson = JSON.stringify(data);
-    if (sessionStorage.length === 0) {
-        sessionStorage.setItem('Select Article 1', dataJson); 
-    } else if (sessionStorage.length === 1) {
-        sessionStorage.setItem('Select Article 2', dataJson);
-    } else if (sessionStorage.length === 2) {
-        sessionStorage.setItem('Select Article 3', dataJson);
-    } else if (sessionStorage.length >= 3){
-        alert("Vous devez vider votre panier avant de pouvoir sélectionner un nouvel article.");   
-    }
-});
-
-let request2 = new XMLHttpRequest();
-request2.open('GET', "http://localhost:3000/api/cameras?/controllers/camera:id=given_id");
-request2.responseType = 'json';
-request2.send();
-request2.onload = function () {
-    console.log(request2.response)
-}
+getProducts()

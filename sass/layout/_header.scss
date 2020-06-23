@@ -9,15 +9,7 @@
     align-items: center;
 }
 
-header h1, header a{
-    font-family: 'Teko', Arial, sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #3B2D39;
-}
-
-.header__nav a{
+.nav a{
     margin-left: 15px;
 }
 
@@ -26,15 +18,5 @@ header h1, header a{
 }
 
  header a:hover{
-    border-radius: 30px;
-    background-color: #F4EBF2;
-    outline: none;
-    padding: 2px;
-}
-
-/* responsive */
-@media (max-width: 650px){
-    header h1, header a{
-        font-size: 18px;
-    }
+    opacity: 0.7;
 }

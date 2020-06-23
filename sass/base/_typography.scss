@@ -1,0 +1,275 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+ul{
+    list-style: none;
+}
+
+
+
+/* =======================================================
+========================================================== 
+FONTS STYLE 
+==========================================================
+======================================================= */
+
+
+//GLOBAL
+h2{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 56px;
+    font-weight: 900;
+}
+
+.btn{ 
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 26px;
+}
+
+.end-text_index, 
+.end-text_product,
+.end-text_panier,
+.end-text_confirm{
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+//HEADER
+header h1, 
+header a{
+    font-family: 'Teko', Arial, sans-serif;
+    font-size: 43px;
+    color: #3B2D39;
+    font-weight: 900;
+}
+
+
+//BANNER
+.banner-title{
+    font-family: 'Roboto', Arial, sans-serif;
+}
+.banner-title h2{
+    font-family: 'Arial Bold', sans-serif;
+    font-size: 42px;
+    color: white;
+}
+.banner-title p{
+    font-family: 'Arial Bold', sans-serif;
+    font-size: 28px;
+    color: white;
+}
+
+
+//INDEX.HTML
+#cardName{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 40px;
+    color: #3B2D39;
+    font-weight: 900;
+}
+#cardPrice, #cardDescription, #cardLenses{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #272321;
+    font-size: 24px;
+    font-weight: 500
+}
+
+
+//PRODUIT.HTML
+.name{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 40px;
+    color: #3B2D39;
+    font-weight: 700;
+}
+.price, 
+.lenses, 
+.description{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.choice-lenses label{
+    font-size: 40px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-weight: 700;
+}
+
+.choice-lenses select{ 
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #000000;
+}
+
+
+//PANIER.HTML
+thead, tfoot{ //Table order summary
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+}
+
+tbody{
+    font-size: 26px;
+    font-weight: 500;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #272321;   
+}
+
+.order-div{
+    font-size: 40px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-weight: 700;
+}
+
+.contact-form label { // Form contact
+    font-size: 20px;
+    color: #272321;
+    font-weight: 500;
+}
+
+
+//CONFIRMATION.HTML
+.order-confirm h3{
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 40px;
+    color: #3B2D39;
+    font-weight: 900;
+}
+
+.order-confirm_text{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #3B2D39;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#orderPrice{
+    font-weight: 900;
+    color: black;
+}
+
+
+//FOOTER
+.footer p{
+    font-size: 12px;
+    color: #000000;
+}
+
+/* =======================================================
+========================================================== 
+FONTS STYLE (RESPONSIVE)
+==========================================================
+======================================================= */
+@media (max-width: 1450px) {
+    h2{
+        font-size: 46px;   
+    }
+
+    #cardPrice, 
+    #cardDescription, 
+    #cardLenses,
+    .price, 
+    .lenses, 
+    .description{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    h2{
+        font-size: 32px;   
+    }
+
+    #cardPrice, 
+    #cardDescription, 
+    #cardLenses,
+    .price, 
+    .lenses, 
+    .description{
+        font-size: 16px;
+    }
+
+    .order-confirm_text{
+        font-size: 18px;
+    }
+
+    .order-div{
+        font-size: 28px;
+    }
+    thead, tfoot{ //Table order summary
+        font-size: 22px;
+    }
+
+    tbody{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 850px) {
+    h2,
+    .banner-title h2,
+    .choice-lenses label,
+    .order-confirm h3,
+    .name,
+    #cardName{
+        font-size: 24px;   
+    }
+
+    .banner-title p,
+    .order-div{
+        font-size: 18px;
+    }
+
+    .end-text_index, 
+    .end-text_product,
+    .end-text_panier,
+    .end-text_confirm{
+        font-size: 14px;
+    }
+
+    header h1, 
+    header a{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    h2,
+    .banner-title h2,
+    .choice-lenses label,
+    .order-confirm h3,
+    .name,
+    #cardName{
+        font-size: 20px;   
+    }
+
+    .end-text_index, 
+    .end-text_product,
+    .end-text_panier,
+    .end-text_confirm{
+        font-size: 12px;
+    }
+}
