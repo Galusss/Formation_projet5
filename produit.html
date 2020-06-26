@@ -74,12 +74,20 @@
                 alt="Oricono est un site de vente en ligne proposant une sélection de matériel et d'accessoire pour photographe." />
             </div>
 
-            <h2 class="customize-title">Personnaliser votre appareil</h2>
-
             <!-- CUSTOMIZE & SELECT PRODUCT -->
             <section id="custom-and-select">
-                <h6 class="hidden">/</h6> <!-- create a title that will be hidden for the W3C test -->
-                <!-- dynamic dispaly -->
+                <h2 class="customize-title">Personnaliser votre appareil</h2>
+                <!-- Dynamic display of the selected product -->
+                <form action="panier.html" method="POST" class="choice-lenses">
+                    <label>Choisissez vos lentilles :</label>
+                    <select class="select-lenses" aria-label="Choisissez vos lentilles.">
+                        <option class="lenses" value="">Choisissez vos lentilles...</option>
+                        <!-- (option) : Dynamic display of lenses according to the selected product -->
+                    </select>
+                    <button type="submit" class="btn btn-customize" aria-label="Valider votre produit et dirigez vous vers votre panier Oricono">
+                        Valider
+                    </button>
+                </form>
             </section>
 
             <span class="end-text_product">L'équipe d'Oricono vous remercie pour votre visite !</span>

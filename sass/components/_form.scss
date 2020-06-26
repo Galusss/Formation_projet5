@@ -34,15 +34,21 @@
 .choice-lenses{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .choice-lenses label{
     width: 100%;
     text-align: center;
     margin-top: 50px;
-    margin-bottom: 80px;
 
 }
 .choice-lenses select{
+    margin-top: 15px;
     width: 50%;
     height: 20px;
+}
+
+.hide{
+    display: none;
 }

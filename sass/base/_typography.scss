@@ -78,13 +78,13 @@ header a{
 
 
 //INDEX.HTML
-#cardName{
+.cardName{
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 40px;
     color: #3B2D39;
     font-weight: 900;
 }
-#cardPrice, #cardDescription, #cardLenses{
+.cardPrice, .cardDescription, .cardLenses{
     font-family: 'Roboto', Arial, sans-serif;
     color: #272321;
     font-size: 24px;
@@ -188,9 +188,9 @@ FONTS STYLE (RESPONSIVE)
         font-size: 46px;   
     }
 
-    #cardPrice, 
-    #cardDescription, 
-    #cardLenses,
+    .cardPrice, 
+    .cardDescription, 
+    .cardLenses,
     .price, 
     .lenses, 
     .description{
@@ -203,9 +203,9 @@ FONTS STYLE (RESPONSIVE)
         font-size: 32px;   
     }
 
-    #cardPrice, 
-    #cardDescription, 
-    #cardLenses,
+    .cardPrice, 
+    .cardDescription, 
+    .cardLenses,
     .price, 
     .lenses, 
     .description{
@@ -234,7 +234,7 @@ FONTS STYLE (RESPONSIVE)
     .choice-lenses label,
     .order-confirm h3,
     .name,
-    #cardName{
+    .cardName{
         font-size: 24px;   
     }
 
@@ -262,8 +262,8 @@ FONTS STYLE (RESPONSIVE)
     .choice-lenses label,
     .order-confirm h3,
     .name,
-    #cardName{
-        font-size: 20px;   
+    .cardName{
+        font-size: 18px;   
     }
 
     .end-text_index, 
