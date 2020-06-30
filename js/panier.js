@@ -97,7 +97,7 @@ function postRequest() { // POST call to API with Ajax and Fetch
         "city": form.city.value
     }
     for (let i = 0; i < productSelect.length; i++) { // Create a loop to increment the array of products
-        let = product_id = productSelect[i].id;
+        let product_id = productSelect[i].id;
         const newProduct = products.push(product_id);
     }
     const insertPost = async function (data) { // Create an async function

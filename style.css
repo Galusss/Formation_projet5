@@ -153,7 +153,10 @@ FONTS STYLE (RESPONSIVE)
   .price,
   .lenses,
   .description {
-    font-size: 20px; } }
+    font-size: 20px; }
+
+  .choice-lenses select {
+    font-size: 8px; } }
 @media (max-width: 1200px) {
   h2 {
     font-size: 32px; }
