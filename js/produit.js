@@ -20,15 +20,7 @@ const getProducts = async function () { // Create an async function
         let data = await response.json() // Wait for conversion of json response to object
         for (let i = 0; i < data.length; i++) {
             function showProducts() { // Create a function that stores and displays my products
-                const product = function (id, imageUrl, name, lenses, price, description) { // Create a object that stores the products
-                    this.id = id;
-                    this.imageUrl = imageUrl;
-                    this.name = name;
-                    this.lenses = lenses;
-                    this.price = price;
-                    this.description = description;
-                }       
-                const products = new product(data[i]._id, data[i].imageUrl, data[i].name, data[i].lenses, data[i].price, data[i].description); // Add the products in the object
+                const products = new newProduct(data[i]._id, data[i].imageUrl, data[i].name, data[i].lenses, data[i].price, data[i].description); // This class is in products.js
                 let searchId = "?" + products.id;
                 if (window.location.search.indexOf(searchId) > -1) { // IF the location.search is identical to the product id
                     createContent() // Create the content
@@ -41,34 +33,29 @@ const getProducts = async function () { // Create an async function
                     // Get the form and display the values
                     let form = document.querySelector("form");
                     productSelect.appendChild(form);
-                    let option = document.querySelector("option");
-                    option.setAttribute("class", "hide"); // Hides the option create for the W3C test
+                    document.querySelector("option").setAttribute("class", "hide"); // Hides the option create for the W3C test
+                    const select = document.querySelector("select");
                     for (let i = 0; i < products.lenses.length; i++) { 
-                        let newOption = document.createElement("option"); // New option
-                        let select = document.querySelector("select");
+                        let newOption = document.createElement("option") // New option
+                            newOption.setAttribute("class", "lense")
+                            newOption.setAttribute("value", products.lenses[i])
+                            newOption.setAttribute("selected", "false")
+                            newOption.innerHTML = products.lenses[i]
                         select.appendChild(newOption);
-                        newOption.setAttribute("class", "lense");
-                        newOption.setAttribute("value", products.lenses[i]);
-                        newOption.setAttribute("selected", "false");
-                        newOption.innerHTML = products.lenses[i];
                         /*=======================================================
                         When the form is submitted
                         =======================================================*/
                         form.addEventListener("submit", function (event) { // Create event function
-                            if (newOption.selected === true) { // IF option is select              
-                                let productSelected = JSON.parse(sessionStorage.getItem("productSelected") || "[]"); // Define storage in javascript object
-                                if (productSelected.length < 5) { 
-                                    let data = {
-                                        id: products.id,
-                                        name: products.name,
-                                        price: products.price,
-                                        lenses: newOption.value
-                                    };
-                                    productSelected.push(data); // Add an element to the object data
-                                    sessionStorage.setItem("productSelected", JSON.stringify(productSelected)); // Store product in sessionStorage
-                                } else { // ELSE
-                                    alert("Vous devez vider votre panier avant de commander un nouveau produit.")
-                                }
+                            if (newOption.selected === true && newOption.value !== '') { // IF option is select              
+                                let product = JSON.parse(sessionStorage.getItem("product") || "[]"); // Define storage in javascript object
+                                let data = {
+                                    id: products.id,
+                                    name: products.name,
+                                    price: products.price,
+                                    lenses: newOption.value
+                                };
+                                product.push(data); // Add an element to the object data
+                                sessionStorage.setItem("product", JSON.stringify(product)); // Store product in sessionStorage   
                             }
                         });
                     }

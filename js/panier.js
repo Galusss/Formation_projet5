@@ -1,7 +1,7 @@
 // Global variable
 let btnClear = document.getElementById("clear-order_summary");
 let form = document.querySelector("form");
-let productSelect = JSON.parse(sessionStorage.getItem("productSelected")); // Get product storage
+let productSelect = JSON.parse(sessionStorage.getItem("product")); // Get product storage
 
 // Global variable (for dynamically create and display content with products recap selected)
 let tBody = document.querySelector("tbody"); //  Get the querySelector of the array body and create the content starting from that
@@ -43,12 +43,9 @@ function confirmOrder() {
         });
         form.addEventListener("submit", function (submitOrder) { // When the form is submitted the order information is sent to the server
             event.preventDefault() // Stop action to confirmation.html
-            for (let i = 0; i < productSelect.length; i++) {
-                let x = productSelect.length - 1; // Create a variable that will be equal to the number of products to order
-                if (x === i) { // IF the variable is equal to the number of products
                     postRequest() // Send request
-                }
-            }
+
+            
         });
     }
 }
@@ -111,7 +108,7 @@ function postRequest() { // POST call to API with Ajax and Fetch
         if (response.ok) { // IF the answer is "ok"
             let responseData = await response.json() // Wait for conversion of json response to object
             window.open("confirmation.html", "_parent"); // Opens the confirmation page
-            sessionStorage.removeItem("productSelected")
+            sessionStorage.removeItem("product")
         } else { // ELSE (the server response is not "ok")
             console.error("Retour du serveur : " + response.status); // Displays an error message with the status code of the request
         }

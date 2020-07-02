@@ -20,15 +20,7 @@ const getProducts = async function () { // Create an async function
         let data = await response.json() // Wait for conversion of json response to object
         for (let i = 0; i < data.length; i++) {
             function showContent() { // Create a function that stores and displays my products
-                const product = function (id, imageUrl, name, lenses, price, description) { // Create a object that stores the products
-                    this.id = id;
-                    this.imageUrl = imageUrl;
-                    this.name = name;
-                    this.lenses = lenses;
-                    this.price = price;
-                    this.description = description;
-                } 
-                const products = new product(data[i]._id, data[i].imageUrl, data[i].name, data[i].lenses, data[i].price, data[i].description); // Add the products in the object
+                const products = new newProduct(data[i]._id, data[i].imageUrl, data[i].name, data[i].lenses, data[i].price, data[i].description); // This class is in products.js
                 /*=======================================================
                 Dynamically create and display content with product information
                 =======================================================*/
@@ -63,7 +55,7 @@ function createContent() { // Create dynamic content
     productCard.appendChild(imgParent);
     imgParent.setAttribute("width", "400");
     imgParent.setAttribute("height", "400");
-    imgParent.setAttribute("alt", "Voici l'un de nos modèle de caméra que vous pouvez retrouver sur Oricono'.");
+    imgParent.setAttribute("alt", "Voici l'un de nos modèle de caméra que vous pouvez retrouver sur Oricono.");
     infosCard = document.createElement("div"); // New div
     productCard.appendChild(infosCard);
     infosCard.setAttribute("class", "infos-card");
