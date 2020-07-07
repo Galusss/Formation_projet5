@@ -36,11 +36,11 @@ const getProducts = async function () { // Create an async function
                     document.querySelector("option").setAttribute("class", "hide"); // Hides the option create for the W3C test
                     const select = document.querySelector("select");
                     for (let i = 0; i < products.lenses.length; i++) { 
-                        let newOption = document.createElement("option") // New option
-                            newOption.setAttribute("class", "lense")
-                            newOption.setAttribute("value", products.lenses[i])
-                            newOption.setAttribute("selected", "false")
-                            newOption.innerHTML = products.lenses[i]
+                        let newOption = document.createElement("option"); // New option
+                        newOption.setAttribute("class", "lense");
+                        newOption.setAttribute("value", products.lenses[i]);
+                        newOption.setAttribute("selected", "false");
+                        newOption.innerHTML = products.lenses[i];
                         select.appendChild(newOption);
                         /*=======================================================
                         When the form is submitted

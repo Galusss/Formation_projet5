@@ -34,7 +34,7 @@ function confirmOrder() {
             // Table value 
             tdName.innerHTML = productSelect[i].name;
             tdLenses.innerHTML = productSelect[i].lenses;
-            tdPrice.innerHTML = productSelect[i].price + " €"
+            tdPrice.innerHTML = productSelect[i].price + " €";
         }
         total() // Total product price
         btnClear.addEventListener("click", function (clearStorage) { // Empty the order summary and delete the stored products
@@ -61,7 +61,7 @@ function createTable() { // Dynamically create and display content with products
     trProducts.appendChild(tdLenses);
     tdPrice = document.createElement("td"); // New td (product price)
     trProducts.appendChild(tdPrice);
-}
+};
 
 function total() { // Get the total price and create an order number
     let tFoot = document.querySelector("tfoot"); //  Get the querySelector of the array foot and create the total price starting from that
@@ -74,7 +74,7 @@ function total() { // Get the total price and create an order number
     // Calculation of the total price according to the number of products & Generate an order number
     let total = 0;
     for (let i = 0; i < productSelect.length; i++) {
-        total += productSelect[i].price
+        total += productSelect[i].price;
     }
     totalPrice = total;
     tdTotal.innerHTML = "Prix total : " + totalPrice + " €"; // Displays the total price in the recap
@@ -82,7 +82,7 @@ function total() { // Get the total price and create an order number
         totalPrice: totalPrice
     }
     sessionStorage.setItem("orderInfo", JSON.stringify(orderData)); // Stores the order ID and total price in the sessionStorage    
-}   
+};
 
 function postRequest() { // POST call to API with Ajax and Fetch
     let products = []; // products: [string]
@@ -104,11 +104,11 @@ function postRequest() { // POST call to API with Ajax and Fetch
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
-        })
+        });
         if (response.ok) { // IF the answer is "ok"
             let responseData = await response.json() // Wait for conversion of json response to object
             window.open("confirmation.html", "_parent"); // Opens the confirmation page
-            sessionStorage.removeItem("product")
+            sessionStorage.removeItem("product");
         } else { // ELSE (the server response is not "ok")
             console.error("Retour du serveur : " + response.status); // Displays an error message with the status code of the request
         }
