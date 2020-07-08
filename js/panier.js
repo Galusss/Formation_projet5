@@ -43,9 +43,7 @@ function confirmOrder() {
         });
         form.addEventListener("submit", function (submitOrder) { // When the form is submitted the order information is sent to the server
             event.preventDefault() // Stop action to confirmation.html
-                    postRequest() // Send request
-
-            
+            postRequest() // Send request    
         });
     }
 }

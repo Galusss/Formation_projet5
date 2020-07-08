@@ -20,28 +20,20 @@ const getProducts = async function () { // Create an async function
         let data = await response.json() // Wait for conversion of json response to object
         for (let i = 0; i < data.length; i++) {
             function showContent() { // Create a function that stores and displays my products
-                const products = new newProduct(data[i]._id, data[i].imageUrl, data[i].name, data[i].lenses, data[i].price, data[i].description); // This class is in products.js
+                const product = new products(data[i]._id, data[i].imageUrl, data[i].name, data[i].lenses, data[i].price, data[i].description); // This class is in products.js
                 /*=======================================================
                 Dynamically create and display content with product information
                 =======================================================*/
-                createContent()
-                // Content value
-                imgParent.setAttribute("src", products.imageUrl);
-                cardName.innerHTML = products.name;
-                cardPrice.innerHTML = products.price + " €";
-                cardDescription.innerHTML = products.description;
-                cardLenses.innerHTML = products.lenses.join(" ou ");
-                // Button to select the product
-                cardDescription.appendChild(cardSelectBtn);
-                cardSelectBtn.setAttribute("href", "produit.html?" + products.id); // Product id is send in window.location.search
+                createContent();
+                contentValue(product);
             }
-            showContent()
+            showContent();
         }
     } else { // ELSE (the server response is not "ok")
         console.error("Retour du serveur :", response.status); // Displays an error message with the status code of the request
     }
 }
-getProducts()
+getProducts();
 
 
 function createContent() { // Create dynamic content
@@ -77,4 +69,16 @@ function createContent() { // Create dynamic content
     cardSelectBtn.classList.add("btn_home");
     cardSelectBtn.setAttribute("title", "Séléctionner et personnaliser ce produit");
     cardSelectBtn.setAttribute("aria-label", "Sélectionner et personnaliser ce produit");
-}
+};
+
+function contentValue(product) {
+    // Content value
+    imgParent.setAttribute("src", product.imageUrl);
+    cardName.innerHTML = product.name;
+    cardPrice.innerHTML = product.price + " €";
+    cardDescription.innerHTML = product.description;
+    cardLenses.innerHTML = product.lense.join(" ou ");
+    // Button to select the product
+    cardDescription.appendChild(cardSelectBtn);
+    cardSelectBtn.setAttribute("href", "produit.html?" + product.id); // Product id is send in window.location.search
+};
