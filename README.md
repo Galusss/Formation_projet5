@@ -1,4 +1,4 @@
-## Formation_projet5
+## OC_project5
 ### Formation Développeur Web OpenclassRooms (P5)
 
 #### __Exercice :__ Construisez un site e-commerce.
